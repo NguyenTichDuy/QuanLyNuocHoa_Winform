@@ -42,7 +42,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaControlBox8 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox4 = new Guna.UI.WinForms.GunaControlBox();
-            this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
+            this.btnClose = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbTaiKhoan = new System.Windows.Forms.Label();
@@ -225,7 +225,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.gunaControlBox8);
             this.panel1.Controls.Add(this.gunaControlBox4);
-            this.panel1.Controls.Add(this.gunaControlBox2);
+            this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.gunaControlBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(201, 0);
@@ -265,20 +265,21 @@
             this.gunaControlBox4.Size = new System.Drawing.Size(49, 33);
             this.gunaControlBox4.TabIndex = 6;
             // 
-            // gunaControlBox2
+            // btnClose
             // 
-            this.gunaControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox2.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox2.AnimationSpeed = 0.03F;
-            this.gunaControlBox2.IconColor = System.Drawing.Color.Black;
-            this.gunaControlBox2.IconSize = 15F;
-            this.gunaControlBox2.Location = new System.Drawing.Point(844, 8);
-            this.gunaControlBox2.Name = "gunaControlBox2";
-            this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox2.Size = new System.Drawing.Size(39, 33);
-            this.gunaControlBox2.TabIndex = 2;
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.AnimationHoverSpeed = 0.07F;
+            this.btnClose.AnimationSpeed = 0.03F;
+            this.btnClose.IconColor = System.Drawing.Color.Black;
+            this.btnClose.IconSize = 15F;
+            this.btnClose.Location = new System.Drawing.Point(844, 8);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.btnClose.OnHoverIconColor = System.Drawing.Color.White;
+            this.btnClose.OnPressedColor = System.Drawing.Color.Black;
+            this.btnClose.Size = new System.Drawing.Size(39, 33);
+            this.btnClose.TabIndex = 2;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // gunaControlBox1
             // 
@@ -314,9 +315,9 @@
             this.lbTaiKhoan.ForeColor = System.Drawing.Color.White;
             this.lbTaiKhoan.Location = new System.Drawing.Point(118, 37);
             this.lbTaiKhoan.Name = "lbTaiKhoan";
-            this.lbTaiKhoan.Size = new System.Drawing.Size(51, 18);
+            this.lbTaiKhoan.Size = new System.Drawing.Size(50, 18);
             this.lbTaiKhoan.TabIndex = 5;
-            this.lbTaiKhoan.Text = "Admin";
+            this.lbTaiKhoan.Text = "admin";
             // 
             // lbTime
             // 
@@ -416,11 +417,11 @@
         private System.Windows.Forms.Timer timer2;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox8;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox4;
-        private Guna.UI.WinForms.GunaControlBox gunaControlBox2;
+        private Guna.UI.WinForms.GunaControlBox btnClose;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
         private System.Windows.Forms.TableLayoutPanel pnControl;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
-        private System.Windows.Forms.Label lbTaiKhoan;
+        public System.Windows.Forms.Label lbTaiKhoan;
     }
 }

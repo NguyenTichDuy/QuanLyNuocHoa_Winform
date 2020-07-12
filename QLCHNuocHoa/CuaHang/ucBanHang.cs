@@ -168,6 +168,7 @@ namespace CuaHang
                           c.GiaTien
                       });
             dataGridViewSanPham.DataSource = ls.ToList();
+          
         }
     }
 }

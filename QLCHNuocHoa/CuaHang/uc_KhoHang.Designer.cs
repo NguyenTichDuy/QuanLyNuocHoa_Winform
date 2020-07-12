@@ -34,30 +34,30 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.dataGridViewKhoHang = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.maNuocHoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenNuocHoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nhanHieuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xuatXuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuongHienTaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dungTichDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CMTEditDelete = new Guna.UI.WinForms.GunaContextMenuStrip();
             this.sửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuocHoaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnThemSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.btnThemLoai = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maNuocHoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNuocHoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nhanHieuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xuatXuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuongHienTaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dungTichDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nuocHoaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKhoHang)).BeginInit();
             this.CMTEditDelete.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nuocHoaBindingSource2)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuocHoaBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -142,6 +142,155 @@
             this.dataGridViewKhoHang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dataGridViewKhoHang.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewKhoHang_CellMouseDown);
             // 
+            // TenTheLoai
+            // 
+            this.TenTheLoai.DataPropertyName = "TenTheLoai";
+            this.TenTheLoai.FillWeight = 101.8107F;
+            this.TenTheLoai.HeaderText = "Tên thể loại";
+            this.TenTheLoai.Name = "TenTheLoai";
+            this.TenTheLoai.ReadOnly = true;
+            this.TenTheLoai.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // CMTEditDelete
+            // 
+            this.CMTEditDelete.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.CMTEditDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.CMTEditDelete.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sửaToolStripMenuItem,
+            this.xóaToolStripMenuItem});
+            this.CMTEditDelete.Name = "CMTEditDelete";
+            this.CMTEditDelete.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.CMTEditDelete.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.CMTEditDelete.RenderStyle.ColorTable = null;
+            this.CMTEditDelete.RenderStyle.RoundedEdges = true;
+            this.CMTEditDelete.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.CMTEditDelete.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.CMTEditDelete.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.CMTEditDelete.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.CMTEditDelete.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
+            this.CMTEditDelete.Size = new System.Drawing.Size(110, 56);
+            // 
+            // sửaToolStripMenuItem
+            // 
+            this.sửaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.sửaToolStripMenuItem.Name = "sửaToolStripMenuItem";
+            this.sửaToolStripMenuItem.Size = new System.Drawing.Size(109, 26);
+            this.sửaToolStripMenuItem.Text = "Sửa";
+            this.sửaToolStripMenuItem.Click += new System.EventHandler(this.sửaToolStripMenuItem_Click);
+            // 
+            // xóaToolStripMenuItem
+            // 
+            this.xóaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(109, 26);
+            this.xóaToolStripMenuItem.Text = "Xóa";
+            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel1.Controls.Add(this.tableLayoutPanel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 424);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(896, 83);
+            this.panel1.TabIndex = 0;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.94118F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.05882F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 421F));
+            this.tableLayoutPanel2.Controls.Add(this.btnThemSanPham, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnThemLoai, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.guna2TextBox1, 3, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(896, 83);
+            this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // btnThemSanPham
+            // 
+            this.btnThemSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemSanPham.CheckedState.Parent = this.btnThemSanPham;
+            this.btnThemSanPham.CustomImages.Parent = this.btnThemSanPham;
+            this.btnThemSanPham.FillColor = System.Drawing.Color.Transparent;
+            this.btnThemSanPham.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnThemSanPham.ForeColor = System.Drawing.Color.White;
+            this.btnThemSanPham.HoverState.Parent = this.btnThemSanPham;
+            this.btnThemSanPham.Image = global::CuaHang.Properties.Resources.icons8_add_list_48px;
+            this.btnThemSanPham.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnThemSanPham.Location = new System.Drawing.Point(3, 19);
+            this.btnThemSanPham.Name = "btnThemSanPham";
+            this.btnThemSanPham.ShadowDecoration.Parent = this.btnThemSanPham;
+            this.btnThemSanPham.Size = new System.Drawing.Size(139, 44);
+            this.btnThemSanPham.TabIndex = 2;
+            this.btnThemSanPham.Text = "Thêm sản phẩm";
+            this.btnThemSanPham.Click += new System.EventHandler(this.btnThemSanPham_Click);
+            // 
+            // btnThemLoai
+            // 
+            this.btnThemLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemLoai.CheckedState.Parent = this.btnThemLoai;
+            this.btnThemLoai.CustomImages.Parent = this.btnThemLoai;
+            this.btnThemLoai.FillColor = System.Drawing.Color.Transparent;
+            this.btnThemLoai.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnThemLoai.ForeColor = System.Drawing.Color.White;
+            this.btnThemLoai.HoverState.Parent = this.btnThemLoai;
+            this.btnThemLoai.Image = global::CuaHang.Properties.Resources.icons8_add_database_48px;
+            this.btnThemLoai.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnThemLoai.Location = new System.Drawing.Point(148, 19);
+            this.btnThemLoai.Name = "btnThemLoai";
+            this.btnThemLoai.ShadowDecoration.Parent = this.btnThemLoai;
+            this.btnThemLoai.Size = new System.Drawing.Size(151, 44);
+            this.btnThemLoai.TabIndex = 3;
+            this.btnThemLoai.Text = "Thêm Loại";
+            this.btnThemLoai.Click += new System.EventHandler(this.btnThemLoai_Click_1);
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2TextBox1.BorderRadius = 12;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.IconLeft = global::CuaHang.Properties.Resources.icons8_search_128px_31;
+            this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(30, 30);
+            this.guna2TextBox1.Location = new System.Drawing.Point(585, 23);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "Tìm kiếm";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Size = new System.Drawing.Size(200, 36);
+            this.guna2TextBox1.TabIndex = 4;
+            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "TheLoai";
+            this.dataGridViewTextBoxColumn1.FillWeight = 101.8107F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Tên thể loại";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 896;
+            // 
             // maNuocHoaDataGridViewTextBoxColumn
             // 
             this.maNuocHoaDataGridViewTextBoxColumn.DataPropertyName = "MaNuocHoa";
@@ -157,15 +306,6 @@
             this.tenNuocHoaDataGridViewTextBoxColumn.HeaderText = "Tên nước hoa";
             this.tenNuocHoaDataGridViewTextBoxColumn.Name = "tenNuocHoaDataGridViewTextBoxColumn";
             this.tenNuocHoaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // TenTheLoai
-            // 
-            this.TenTheLoai.DataPropertyName = "TenTheLoai";
-            this.TenTheLoai.FillWeight = 101.8107F;
-            this.TenTheLoai.HeaderText = "Tên thể loại";
-            this.TenTheLoai.Name = "TenTheLoai";
-            this.TenTheLoai.ReadOnly = true;
-            this.TenTheLoai.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // nhanHieuDataGridViewTextBoxColumn
             // 
@@ -207,149 +347,9 @@
             this.giaTienDataGridViewTextBoxColumn.Name = "giaTienDataGridViewTextBoxColumn";
             this.giaTienDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // CMTEditDelete
-            // 
-            this.CMTEditDelete.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.CMTEditDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.CMTEditDelete.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sửaToolStripMenuItem,
-            this.xóaToolStripMenuItem});
-            this.CMTEditDelete.Name = "CMTEditDelete";
-            this.CMTEditDelete.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.CMTEditDelete.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
-            this.CMTEditDelete.RenderStyle.ColorTable = null;
-            this.CMTEditDelete.RenderStyle.RoundedEdges = true;
-            this.CMTEditDelete.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
-            this.CMTEditDelete.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.CMTEditDelete.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.CMTEditDelete.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
-            this.CMTEditDelete.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
-            this.CMTEditDelete.Size = new System.Drawing.Size(110, 56);
-            // 
-            // sửaToolStripMenuItem
-            // 
-            this.sửaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.sửaToolStripMenuItem.Name = "sửaToolStripMenuItem";
-            this.sửaToolStripMenuItem.Size = new System.Drawing.Size(109, 26);
-            this.sửaToolStripMenuItem.Text = "Sửa";
-            this.sửaToolStripMenuItem.Click += new System.EventHandler(this.sửaToolStripMenuItem_Click);
-            // 
-            // xóaToolStripMenuItem
-            // 
-            this.xóaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(109, 26);
-            this.xóaToolStripMenuItem.Text = "Xóa";
-            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
-            // 
             // nuocHoaBindingSource2
             // 
             this.nuocHoaBindingSource2.DataSource = typeof(CuaHang.NuocHoa);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel1.Controls.Add(this.tableLayoutPanel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 424);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(896, 83);
-            this.panel1.TabIndex = 0;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.94118F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.05882F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 406F));
-            this.tableLayoutPanel2.Controls.Add(this.btnThemSanPham, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnThemLoai, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.guna2TextBox1, 3, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(896, 83);
-            this.tableLayoutPanel2.TabIndex = 2;
-            // 
-            // btnThemSanPham
-            // 
-            this.btnThemSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThemSanPham.CheckedState.Parent = this.btnThemSanPham;
-            this.btnThemSanPham.CustomImages.Parent = this.btnThemSanPham;
-            this.btnThemSanPham.FillColor = System.Drawing.Color.Transparent;
-            this.btnThemSanPham.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnThemSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnThemSanPham.HoverState.Parent = this.btnThemSanPham;
-            this.btnThemSanPham.Image = global::CuaHang.Properties.Resources.icons8_add_list_48px;
-            this.btnThemSanPham.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnThemSanPham.Location = new System.Drawing.Point(3, 19);
-            this.btnThemSanPham.Name = "btnThemSanPham";
-            this.btnThemSanPham.ShadowDecoration.Parent = this.btnThemSanPham;
-            this.btnThemSanPham.Size = new System.Drawing.Size(146, 44);
-            this.btnThemSanPham.TabIndex = 2;
-            this.btnThemSanPham.Text = "Thêm sản phẩm";
-            this.btnThemSanPham.Click += new System.EventHandler(this.btnThemSanPham_Click);
-            // 
-            // btnThemLoai
-            // 
-            this.btnThemLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThemLoai.CheckedState.Parent = this.btnThemLoai;
-            this.btnThemLoai.CustomImages.Parent = this.btnThemLoai;
-            this.btnThemLoai.FillColor = System.Drawing.Color.Transparent;
-            this.btnThemLoai.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnThemLoai.ForeColor = System.Drawing.Color.White;
-            this.btnThemLoai.HoverState.Parent = this.btnThemLoai;
-            this.btnThemLoai.Image = global::CuaHang.Properties.Resources.icons8_add_database_48px;
-            this.btnThemLoai.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnThemLoai.Location = new System.Drawing.Point(155, 19);
-            this.btnThemLoai.Name = "btnThemLoai";
-            this.btnThemLoai.ShadowDecoration.Parent = this.btnThemLoai;
-            this.btnThemLoai.Size = new System.Drawing.Size(159, 44);
-            this.btnThemLoai.TabIndex = 3;
-            this.btnThemLoai.Text = "Thêm Loại";
-            this.btnThemLoai.Click += new System.EventHandler(this.btnThemLoai_Click_1);
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox1.BorderRadius = 12;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.IconLeft = global::CuaHang.Properties.Resources.icons8_search_128px_31;
-            this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(30, 30);
-            this.guna2TextBox1.Location = new System.Drawing.Point(592, 23);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Tìm kiếm";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox1.TabIndex = 4;
-            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "TheLoai";
-            this.dataGridViewTextBoxColumn1.FillWeight = 101.8107F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Tên thể loại";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 896;
             // 
             // uc_KhoHang
             // 
@@ -362,9 +362,9 @@
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKhoHang)).EndInit();
             this.CMTEditDelete.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nuocHoaBindingSource2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nuocHoaBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }

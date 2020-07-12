@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,56 +18,39 @@ namespace CuaHang
         {
             InitializeComponent();
         }
-        
-
-        private void Btnthoat_Click(object sender, EventArgs e)
+        public ucDangNhap ucDangNhap;
+        ucQuenMatKhau ucQuenMatKhau;
+        private void FormDangNhap_Load(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void Lblquenmk_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void btnthoat_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-
-        private void guna2Button2_Click_1(object sender, EventArgs e)
-        {
-            try
+            ucDangNhap = new ucDangNhap();
+            ucQuenMatKhau = new ucQuenMatKhau();
+            AddControlsToPanel(ucDangNhap);
+            ucDangNhap.btDangNhap.Click += (object s, EventArgs ev) =>
             {
-                TaiKhoan tk1 = Dbo.getObject().TaiKhoan.Find(tbxtaikhoan.Text);
-                if (tk1 == null && tk1.MatKhau != tbxmatkhau.Text)
+                Guna2Button btn = s as Guna2Button;
+                if (btn == null)
+                    return;
+                if (ucDangNhap.checkSucess)
                 {
-                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
+                    this.Hide();
                 }
-                else
-                {
-                    Check.checkbool = true;
-                    Save.account = tbxtaikhoan.Text;
-                    using (MyForm myForm = new MyForm())
-                    {
-                        myForm.ShowDialog();
-                    }
-                    this.Close();
-                }
-
-
-            }
-            catch { }
+            };
         }
 
-        private void lblquenmk_Click_2(object sender, EventArgs e)
+        private void btnQuenMatKhau_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            //FormQuenMK fq = new FormQuenMK();
-            //fq.ShowDialog();
-            //this.Show();
+            AddControlsToPanel(ucQuenMatKhau);
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            AddControlsToPanel(ucDangNhap);
+        }
+        private void AddControlsToPanel(Control c)
+        {
+            c.Dock = DockStyle.Fill;
+            panelDangNhap.Controls.Clear();
+            panelDangNhap.Controls.Add(c);
         }
     }
 }

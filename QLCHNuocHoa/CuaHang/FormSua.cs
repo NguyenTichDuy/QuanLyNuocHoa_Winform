@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Migrations;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,14 +18,13 @@ namespace CuaHang
         {
             InitializeComponent();
         }
-
+        public bool check = false;
         private void btnLuu_Click(object sender, EventArgs e)
         {
             if (!CheckValues())
             {
                 return;
             }
-
             NuocHoa nuocHoa = new NuocHoa();
             nuocHoa.MaNuocHoa = tbMaNuocHoa.Text;
             nuocHoa.TenNuocHoa = tbTenNuocHoa.Text;
@@ -34,8 +34,9 @@ namespace CuaHang
             nuocHoa.DungTich = tbDungTich.Text;
             nuocHoa.SoLuongHienTai = Convert.ToInt32(tbSoLuong.Text);
             nuocHoa.GiaTien = Convert.ToDouble(tbGiaTien.Text);
-            Dbo.getObject().NuocHoa.Attach(nuocHoa);
+            Dbo.getObject().NuocHoa.Add(nuocHoa);
             Dbo.getObject().SaveChanges();
+            check = true;
             this.Close();
         }
 

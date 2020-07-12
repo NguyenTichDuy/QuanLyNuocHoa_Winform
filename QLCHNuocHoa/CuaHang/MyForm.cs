@@ -79,6 +79,7 @@ namespace CuaHang
         {
             movePannel(btnKhoHang);
             AddControlsToPanel(ucKhoHang);
+
         }
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)
@@ -105,9 +106,19 @@ namespace CuaHang
             ucBanHang = new ucBanHang();
             ucKhoHang = new uc_KhoHang();
             ucTaiKhoa = new uc_TaiKhoan();
+            ucTaiKhoa.lbAccount.Text = this.lbTaiKhoan.Text;
+            ucTaiKhoa.btnDangXuat.Click += (object s, EventArgs ev) =>
+            {
+                
+                this.Close();
+            };
             ucCaiDat = new uc_CaiDat();
             AddControlsToPanel(ucBanHang);
-            
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -83,14 +83,15 @@ namespace CuaHang
             {
                 frm.tbMaNuocHoa.Text = dataGridViewKhoHang.Rows[index].Cells[0].Value.ToString();
                 frm.tbTenNuocHoa.Text = dataGridViewKhoHang.Rows[index].Cells[1].Value.ToString();
-                frm.tbNhanHieu.Text = dataGridViewKhoHang.Rows[index].Cells[2].Value.ToString();
-                frm.tbXuatXu.Text = dataGridViewKhoHang.Rows[index].Cells[3].Value.ToString();
-                frm.tbSoLuong.Text = dataGridViewKhoHang.Rows[index].Cells[4].Value.ToString();
-                frm.tbDungTich.Text = dataGridViewKhoHang.Rows[index].Cells[5].Value.ToString();
-                frm.tbGiaTien.Text = dataGridViewKhoHang.Rows[index].Cells[6].Value.ToString();
-                frm.cbTheLoai.SelectedText = dataGridViewKhoHang.Rows[index].Cells[6].Value.ToString();
-
+                frm.cbTheLoai.Text = dataGridViewKhoHang.Rows[index].Cells[2].Value.ToString();
+                frm.tbNhanHieu.Text = dataGridViewKhoHang.Rows[index].Cells[3].Value.ToString();
+                frm.tbXuatXu.Text = dataGridViewKhoHang.Rows[index].Cells[4].Value.ToString();
+                frm.tbSoLuong.Text = dataGridViewKhoHang.Rows[index].Cells[5].Value.ToString();
+                frm.tbDungTich.Text = dataGridViewKhoHang.Rows[index].Cells[6].Value.ToString();
+                frm.tbGiaTien.Text = dataGridViewKhoHang.Rows[index].Cells[7].Value.ToString();
                 frm.ShowDialog();
+                if (frm.check)
+                    removeRow(index);
             }    
         }
         private void removeRow(int index)
